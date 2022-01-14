@@ -1,0 +1,640 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css";
+* { 
+    margin: 0;
+    padding: 0;
+    font-style: 'roboto', roboto-bold, sans-serif;
+    color: black;
+}
+
+
+body {
+    background: rgb(249, 230, 220);
+    width: auto;
+    height: auto;
+}
+.container{
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background: rgb(255, 156, 118);
+
+    width: 100%;
+    height: 70px;
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1;
+}
+
+header .logo {
+    width: fit-content;
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 30px;
+    margin: 0;
+}
+
+header .logo img {
+    width: 85px;
+}
+header .logo h2{
+    font-size: 2em;
+    color: black;
+}
+header .Pages {
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 34px;
+
+}
+header .Pages a{
+    text-decoration: none;
+    color: black;
+}
+
+header .LogIn {
+    margin-right: 70px;
+}
+header .LogIn .login--btn{
+    background: #3573ff;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    width: 120px;
+    height: 35px;
+
+    opacity: .9;
+
+}
+header .LogIn .login--btn:hover{
+    opacity: 1;
+}
+.post1 {
+    padding-top: 60px;
+
+    height: 100vh;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/post1.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.post1--text{
+    width: 31%;
+    margin: 35px 0 0 55px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: white;
+
+}
+
+.post1--text h1{
+    font-size: 60px;
+    width: 71%;
+    font-weight: 700;
+}
+.post1--text h3{
+    font-size: 33px;
+    margin: 15px 0 20px 0;
+}
+.post1--text p{
+    font-size: 20px;
+    
+    width: 73%;
+    
+    color: white;
+}
+.post1--challenges{
+    width: 18%;
+    height: 100%;
+
+    background: white;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    text-align: center;
+    
+}
+.post1--challenges h1{
+    margin-top: 25px;
+    text-align: left;
+    margin-left: 22px;
+
+}
+.post1--challenges .post1--challenge1{
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.post1--challenges .post1--challenge1 .challenge--text{ 
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.post1--challenges .post1--challenge1 .challenge--text button{
+    width: 100%;
+    height: 33px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(129, 75, 231);
+    transition: .5s;
+    color: white;
+}
+
+.post1--challenges .post1--challenge1 .challenge--text button:hover{
+    background: black;
+    color: white;
+
+    transition: .5s;
+}
+    /*     */
+
+.post1--challenges .post1--challenge2{
+    border: 1px solid black;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post1--challenges .post1--challenge2 .challenge--text button{
+    width: 100%;
+    height: 33px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(129, 75, 231);
+    transition: .5s;
+    color: white;
+
+}
+
+.post1--challenges .post1--challenge2 .challenge--text button:hover{
+    background: black;
+    color: white;
+
+    transition: .5s;
+}
+
+.post1--challenges .post1--btn{
+    width: 100%;
+    height: 12%;
+    color: black;
+    margin: 0;
+    transition: .5s;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+.post1--challenges .post1--btn button{
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 156, 118);
+    transition: .5s;
+    border: none;
+}
+
+.post1--challenges .post1--btn button:hover{
+    background: rgb(49, 106, 223);
+    color: white;
+
+    transition: .5s;
+
+}
+
+.post--about{
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    width: 100%;
+
+    margin-top: 115px;
+    margin-bottom: 125px;
+
+}
+.post--about .post--about-text{
+    display: flex;  
+    flex-direction: column;
+    
+    height: fit-content;
+    width: 30%
+}
+.post--about-text h1{
+    font-size: 52px;
+    font-weight: 600;
+}
+.post--about .post--about-text p1{
+    width: 68%;
+    font-size: x-large;
+}
+
+.post--about .post--about-text p {
+    width: 80%;
+    font-size: 21px;
+
+    margin: 0;
+}
+.post--about-text a{
+    width: fit-content;
+    height: fit-content;
+
+    margin-top: 30px;
+}
+.post--about-text button {
+    width: 140px;
+    height: 40px;
+
+    background: rgb(129, 75, 231);
+    color: white;
+
+    border: none;
+    border-radius:25px ;
+
+    transition:.5s;
+
+}
+.post--about-text button:hover{
+    background: black;
+
+    transition:.5s;
+
+}
+
+.trainers{
+    width: 84%;
+}
+.trainers--text{
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 100px;
+}
+.trainers--text h1 {
+    font-size: 55px;
+}
+.trainers--text p {
+    width: 54%;
+    font-size: 20px;
+    
+    margin: 0;
+}
+.trainers--img{
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+}
+.trainers--img a {
+    display: block;
+    width: 712px;
+    height: 948px;
+    float: left;
+    position: relative;
+    line-height: 0;
+    text-decoration: none;
+    transition: 0.8s;
+
+}
+.trainers--img a:hover {
+    transform: scale(0.986);
+    transition: 0.5s;
+}
+
+.trainers--img a:after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.trainers--img a:hover:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100.1%;
+    background: transparent;
+    background-image: linear-gradient(180deg, rgba(107, 90, 221, 0), rgba(107, 90, 221, 1));
+    opacity: 0.8;
+
+}
+.trainers--img a:before {
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.trainers--img a:hover:before {
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -26px 0 0 -26px;
+    z-index: 100;
+    opacity: 1;
+    content: "trainers";
+
+}
+
+.trainers--img img {
+    width: 100%;
+    height: auto;
+}
+
+.more--challenges {
+    margin-top: 155px;
+    margin-bottom: 100px;
+
+    width: 84%;
+
+    display: flex;
+    flex-direction: column;
+
+    }
+
+.more--challenges-text{
+    width: fit-content;
+    margin-left: 42px;
+}
+.more--challenges-text p{
+    margin: 0;
+    width: 53%;
+    font-size: 24px;
+
+}
+.challenges--block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+
+}
+.challenges--block .block{
+    margin: 34px;
+    width: 28%;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-bottom: 15px;
+}
+
+.challenges--block .block img{
+    width: 100%;
+    height: 235px;
+}   
+
+.challenges--block .block h1{
+    margin-left: 35px;
+
+}
+.challenges--block .block p{
+    margin-left: 35px;
+}
+
+.challenges--block .block button{
+    margin-left: 35px;
+}
+
+
+.challenges--block .block button{
+    width: 140px;
+    height: 40px;
+    color: white;
+    background:rgb(129, 75, 231);
+
+    border: none;
+    border-radius:25px;
+
+    transition: .5s;
+}
+
+.challenges--block .block button:hover{
+    background: black;
+    transition: .5s;
+
+}
+.invite--block{
+    width: 84%;
+    height: 670px;
+
+    display: flex;
+    flex-direction: row;
+    
+    background: red;
+}
+.invite--left{
+    width: 50%;
+    background: rgb(255, 156, 118,1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 110px;
+
+}
+.invite--left-text{
+    height: fit-content;
+    width: 57%;
+
+}
+.invite--left-text img{
+    width: 85px;
+    margin-bottom: 25px;
+}
+.invite--left-text h1{
+    width: 100%;
+    font-size: 65px;
+}
+.invite--left-text h3{
+    margin-top: 25px;
+}
+
+.invite--right{
+    width: 50%;
+
+    background: rgb(255, 215, 199)
+}
+
+.invite--right-form{
+    width: 100%;
+    height: 100%;
+}
+.invite--right-form form{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.invite--right-form form div{
+
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+    height: 100px;
+}
+.invite--right-form form div input{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 10px;
+    border: none;
+
+    font-size: 22px;
+
+}
+.invite--right-form form div span { 
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+footer{
+    width: 92%;
+    height: 250px;
+
+    background: green;
+
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid black;
+}
+footer .footer--left{
+    border-right: 1px solid black;
+
+    width: 15%;
+    height: 100%;
+
+    padding-top: 25px;
+
+}
+footer .footer--left .footer--left-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+footer .footer--left .footer--left-text ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footer--left .footer--left-text ul a{ 
+    color: black;
+    text-decoration: none;
+    margin-top: 8px;
+}
+footer .footer--center{
+    width: 70%;
+    height: 100%;
+    
+    background: purple;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+}
+footer .footer--center h1{
+    font-size: 27px;
+    width: 47%;
+}
+footer .footer--center .footer--center-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer .footer--center .footer--center-input button{
+    width: 110px;
+    height: 60px;
+
+    background: black;
+    color: white;
+
+    transition: .5s ;
+
+    border: none;
+    border-radius: 42px;
+
+    margin-left: 25px;
+}
+footer .footer--center .footer--center-input button:hover{
+    background: rgb(129, 75, 231);
+
+    transition: .5s ;
+}
