@@ -2,7 +2,7 @@
 * { 
     margin: 0;
     padding: 0;
-    font-style: 'roboto', roboto-bold, sans-serif;
+    font-family: 'roboto', roboto-bold, sans-serif;
     color: black;
 }
 
@@ -54,6 +54,8 @@ header .logo {
 
 header .logo img {
     width: 85px;
+    border-radius: 20px;
+
 }
 header .logo h2{
     font-size: 2em;
@@ -96,6 +98,106 @@ header .LogIn .login--btn{
 header .LogIn .login--btn:hover{
     opacity: 1;
 }
+header .LogIn .login--btn:focus{
+    outline: none;
+}
+
+#id01{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    display: none;
+    z-index: 1;
+}
+.window{
+    width: 47%;
+    height: 70%;
+
+    background: rgba(255, 255, 255, 0.87);
+
+    position: fixed;
+    top: 15%;
+    left: 25%;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+.window .close {
+    font-size: 50px;
+
+    position: absolute;
+    right: 2px;
+    top: -12px;   
+    opacity: .6;
+}
+.window .close:hover{
+    color: #e50c0c;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+}
+.window .login--left{
+    
+    width: 30%;
+    height: 100%;
+
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) ), url('../img/login-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.window .login--left form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100%;
+
+}
+.window .login--left form input{
+    width: 98%;
+}
+.window .login--left form .remember--me input{
+    width: auto;
+}
+.window .login--left form a button{
+    height: 33px;
+    width: 130px;
+
+    border-radius: 25px;
+    border: none;
+
+    background: rgb(129, 75, 231);
+
+    transition: .5s;
+    color: white;
+
+}
+.window .login--left form a button:hover{
+    background: black;
+    transition: .5s ;
+    
+}
+
+.window .login--right{
+    width: 70%;
+    height: 100%;
+
+    background: url('../img/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
 .post1 {
     padding-top: 60px;
 
@@ -124,7 +226,16 @@ header .LogIn .login--btn:hover{
     align-items: flex-start;
 
     color: white;
-
+    
+    animation: post1 2s 1 linear;
+    opacity: 1;
+    
+}
+@keyframes post1{
+    0%{
+        margin-left: -255px;
+        opacity: 0;
+    }
 }
 
 .post1--text h1{
@@ -150,18 +261,32 @@ header .LogIn .login--btn:hover{
     background: white;
     color: black;
     
+    margin: 0;
+    padding-top: 70px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     text-align: center;
+
+    animation: post-chal 1.8s 1 linear;
+    opacity: 1;
+
+    position: absolute;
+    top: 0;
+    right: 0;
     
 }
+@keyframes post-chal {
+    0%{
+        opacity: 0;
+        right: -230px;
+    }
+}
 .post1--challenges h1{
-    margin-top: 25px;
-    text-align: left;
-    margin-left: 22px;
+    font-size: xx-large;
 
 }
 .post1--challenges .post1--challenge1{
@@ -281,6 +406,7 @@ header .LogIn .login--btn:hover{
 .post--about-text h1{
     font-size: 52px;
     font-weight: 600;
+    width: 80%;
 }
 .post--about .post--about-text p1{
     width: 68%;
@@ -344,13 +470,14 @@ header .LogIn .login--btn:hover{
 }
 .trainers--img a {
     display: block;
-    width: 712px;
-    height: 948px;
+
     float: left;
     position: relative;
     line-height: 0;
     text-decoration: none;
     transition: 0.8s;
+
+    margin-right: 10px;
 
 }
 .trainers--img a:hover {
@@ -436,6 +563,8 @@ header .LogIn .login--btn:hover{
 }
 .challenges--block .block{
     margin: 34px;
+
+    height: 465px;
     width: 28%;
 
     border: 1px solid black;
@@ -449,7 +578,7 @@ header .LogIn .login--btn:hover{
 
 .challenges--block .block img{
     width: 100%;
-    height: 235px;
+    height: 260px;
 }   
 
 .challenges--block .block h1{
@@ -489,7 +618,6 @@ header .LogIn .login--btn:hover{
     display: flex;
     flex-direction: row;
     
-    background: red;
 }
 .invite--left{
     width: 50%;
@@ -513,7 +641,7 @@ header .LogIn .login--btn:hover{
 }
 .invite--left-text h1{
     width: 100%;
-    font-size: 65px;
+    font-size: 43px;
 }
 .invite--left-text h3{
     margin-top: 25px;
@@ -564,9 +692,8 @@ footer{
     width: 92%;
     height: 250px;
 
-    background: green;
-
     margin-top: 100px;
+    margin-bottom: 85px;
 
     display: flex;
     flex-direction: row;
@@ -602,8 +729,6 @@ footer .footer--center{
     width: 70%;
     height: 100%;
     
-    background: purple;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -611,8 +736,12 @@ footer .footer--center{
     padding-top: 50px;
 }
 footer .footer--center h1{
+    font-size: 23px;
+    width: 40%;
+}
+footer .footer--center p{
+    margin-right: 136px;
     font-size: 27px;
-    width: 47%;
 }
 footer .footer--center .footer--center-input{
     display: flex;
@@ -620,8 +749,8 @@ footer .footer--center .footer--center-input{
     align-items: center;
 }
 footer .footer--center .footer--center-input button{
-    width: 110px;
-    height: 60px;
+    width: 100px;
+    height: 52px;
 
     background: black;
     color: white;
@@ -637,4 +766,827 @@ footer .footer--center .footer--center-input button:hover{
     background: rgb(129, 75, 231);
 
     transition: .5s ;
+}
+footer .footer--center .footer--center-input input{
+    width: 220px;
+    height: 52px;
+    
+    border: none;
+    border-radius: 16px;
+
+}
+footer .footer--right{
+    width: 17%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+
+    background: #854ec3;
+}
+
+footer .footer--right .footer--right-links img{
+    width: 28px;
+    height: 28px;
+    
+    border-radius: 50%;
+}
+                    /*  media queries for Phone - Ipad     */
+@media (max-width:768px) {
+    header .Pages{
+        display: none;
+    }
+    .post1 .post1--challenges{
+        display: none;
+    }
+    
+}
+            /* Media queries for Ipad pro */
+@media (min-width: 992px) and (max-width: 1025px){ 
+    header .Pages{
+        font-size: 25px;
+    }
+    #id01 .window{
+        width: 70%;
+        height: 50%;
+
+        top: 20%;
+        left: 13%;
+        
+    }
+    .post1 .post1--challenges{
+        display: none;
+    }
+    .post1 .post1--text{
+        width: 53%;
+    }
+    .post1 .post1--text h1{
+        width: 83%;
+    }
+    .post1 .post1--text p{
+        width: 80%;
+    }
+    .post--about{
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+    }
+    .post--about .post--about-text{
+        flex-direction: column;
+        align-items: center;
+
+        width: 99%;
+    }
+    .post--about .post--about-text p{
+        width: 80%;
+    }
+    .post--about .post--about-text a{
+        margin-bottom: 20px;
+    }
+    .trainers{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .trainers .trainers--text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 40px;
+    }
+    .trainers .trainers--img{
+        display: flex;
+        flex-direction: column;
+    }
+    .trainers .trainers--img a{
+        margin-top: 50px;
+    }
+    .more--challenges .more--challenges-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .more--challenges .more--challenges-text p{
+        width: fit-content;
+    }
+
+    .more--challenges .challenges--block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .more--challenges .challenges--block .block{
+        width: 55%;
+        height: auto;
+    }
+    .invite--block{
+        width: 100%;
+        height: 1340px;
+
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        
+    }
+    .invite--block .invite--left{
+        width: 85%;
+        height: 35%;
+        padding-top: 60px;
+
+    }
+    .invite--block .invite--right{
+        width: 85%;
+        height: 50%;
+    }
+    .invite--block .invite--right form{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .invite--block .invite--right form div{ 
+        width: 95%;
+
+    }
+    .invite--block .invite--right form .input--message{
+        height: 210px;
+    }
+    footer{
+        margin-top: 0;
+    }
+    footer .footer--center {
+        padding-top: 17px;
+
+    }
+    footer .footer--center h1{
+        width: 64%;
+
+    }
+}
+                 /* Media queries  for Iphone 6, 6+, 6s+, 7, 8, X, XR */
+@media  (max-width:414.95px ) {
+    header .logo h2{
+        font-size: 40px;
+    }
+    header .Pages{
+        display: none;
+    }
+    header .LogIn{
+        display: none;
+    }
+    .post1 .post1--challenges{
+        display: none;
+    }
+    .post1 .post1--text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-left: 17px;
+
+        width: 100%;
+        
+    }
+    .post1 .post1--text h3{
+        margin-top: 100px;
+
+    }
+    .post1 .post1--text p{
+        width: 82%;
+        
+    }
+    .post--about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        
+        margin-top: 50px;
+    }
+    .post--about .post--about-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 91%;
+    }
+    .post--about img{
+        width: 100%;
+        height: 100%;
+    }
+    .post--about .post--about-text p1{
+        width: 80%;
+    }
+    .post--about .post--about-text a{
+        margin-bottom: 15px;
+    }
+    .trainers{
+        width: 100%;
+    }
+    .trainers .trainers--text{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-bottom: 15px;
+    }
+    .trainers .trainers--text h1{
+        font-size: 50px;
+    }
+    .trainers .trainers--text p{
+        width: 90%;
+    }
+    .trainers .trainers--img{
+        display: flex;
+        flex-direction: column;
+    }
+    .trainers .trainers--img a{
+        margin-top: 25px;
+
+        width: 100%;
+        height: 100%;
+    }
+    .more--challenges{
+        margin-top: 60px;
+
+        width: 100%;
+
+    }
+    .more--challenges .more--challenges-text{
+        width: 100%;
+        margin:0;
+
+    }
+    .more--challenges .more--challenges-text p{
+        width: 100%  ;
+    }
+    .more--challenges .challenges--block{
+        display: flex;
+        flex-direction: column;
+    }
+    .more--challenges .challenges--block .block{
+        width: 97%;
+    }
+    .invite--block{
+        width: 100%;
+        height: 1340px;
+        flex-direction: column;
+    }
+    .invite--block .invite--left{
+        width: 100%;
+        height: 50%;
+
+        padding: 0;
+    }
+    .invite--block .invite--left .invite--left-text{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .invite--block .invite--left .invite--left-text h1{
+        font-size: 56px;
+    }
+    .invite--block .invite--right{
+        width: 100%;
+        height: 50%;
+
+    }
+    .invite--block .invite--right .invite--right-form form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .invite--block .invite--right .invite--right-form form div{
+        width: 93%;
+
+    }
+    .invite--block .invite--right .invite--right-form form .input--message{
+        height: 225px;
+
+    }
+    footer{
+        margin-top: 25px;
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        height: fit-content;
+        width: 100%;
+        border: none;
+    }
+    footer .footer--left{
+        width: 100%;
+        
+        border-bottom: 1px solid black;
+        border-right:none;
+    }
+    footer .footer--left .footer--left-text ul{
+        font-weight: 500;
+    }
+    footer .footer--center{
+        width: 100%;
+    }
+    footer .footer--center h1{
+        width: 74%;
+    }
+    footer .footer--center p {
+        margin:0;
+    }
+    footer .footer--center .footer--center-input{
+        display: flex;
+        flex-direction: column;
+        
+        width: 70%;
+    }
+    footer .footer--center .footer--center-input input{
+        width: 100%;
+    }
+    footer .footer--center .footer--center-input button{
+        width: 80%;
+        margin-left: 0;
+        margin-top: 20px;    
+    
+    }
+    footer .footer--right{
+        width: 100%;
+        height: 34vh;
+
+        margin-top: 20px;
+        padding-top: 50px;
+    }
+    footer .footer--right a{
+        margin-bottom: 20px;
+    }
+}
+    
+                /* Media queries for small tablet - ipad mini  */
+@media (min-width:600px) and (max-width: 769px) {
+    header .Pages{
+        display: none;
+    }
+    
+    .post1{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        }
+    .post1--text{
+        display: flex;
+        justify-content: space-between;
+
+        width: 80%;
+    }
+
+    .post1 .post1--text h3{
+        margin: 0 0 20px 0;
+        margin-top: 30vh;
+    }
+    .post1 .post1--challenges { 
+        display: none;
+    }
+    .post--about{
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 55px;
+        margin-bottom: 45px;
+    }
+    .post--about .post--about-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90%;
+    }
+    .post--about img{
+        width: 100%;
+    }
+    .post--about .post--about-text a{
+        margin-bottom: 35px;
+    }
+    .trainers{
+        width: 100%;
+
+    }
+    .trainers--text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .trainers .trainers--img{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .trainers .trainers--img a{
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .more--challenges{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        width: 90%;
+        display: flex;
+        flex-direction:column;
+    }
+    .more--challenges .more--challenges-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .more--challenges .more--challenges-text p{
+        width: 80%;
+
+    }
+    .more--challenges .challenges--block{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .more--challenges .challenges--block .block{
+        width: 90%;
+    }
+    .invite--block{
+        width: 90%;
+        height: 1340px;
+        display: flex;
+        flex-direction: column;
+    }
+    .invite--block .invite--left{
+        width: 100%;
+        height: 40%;
+
+        padding-top: 40px;
+    }
+    .invite--block .invite--left .invite--left-text{
+        width: 57%;
+        height: 100%;
+        
+    }
+    .invite--block .invite--right{
+        width: 100%;
+        height: 60%;
+
+    }
+    .invite--block .invite--right .invite--right-form form{
+        display: flex;
+        flex-direction: column;
+    }
+    .invite--block .invite--right .invite--right-form form div{
+        width: 98%;
+
+    }
+    .invite--block .invite--right .invite--right-form form .input--message{
+        height: 225px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-top: 0;
+
+        border: none;
+    }
+    footer .footer--left{
+        width: 100%;
+        height: fit-content;
+
+        border-right:none;
+        border-bottom: 1px solid black;
+    }
+    footer .footer--left .footer--left-text ul{
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 40px;
+    }
+    footer .footer--center{
+        padding-top: 10px;
+
+    }
+    footer .footer--center h1{
+        width: 70%;
+
+    }
+    footer .footer--center p{
+        margin: 0;
+    }
+    footer .footer--center .footer--center-input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer--center .footer--center-input input{
+     margin-bottom: 10px;   
+        
+    }
+    footer .footer--center .footer--center-input button{
+        margin:0;
+        
+       }
+    footer .footer--right{
+        width: 57%;
+        
+        padding-bottom: 40px;
+        margin-top: 20px;
+    }
+
+}
+@media (min-width:1026px) {
+    Header .Pages a{
+        font-size: x-large;
+    }
+}
+@media (max-width:1026px){
+    .post1 .post1--challenges{
+        display: none;
+    }
+}
+        /* MEDIA QUERIES from Iphone 8+ to big phones  */
+@media (min-width:415px) and (max-width:599px) {
+    
+    .post1 .post1--text{
+        width: 97%;
+        margin-left: 15px;
+
+
+    }
+    .post1 .post1--text h1{
+        width: 100%;
+    }
+    .post1 .post1--text h3  {
+        margin-top: 350px;
+    }
+    .post--about{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .post--about .post--about-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 100%;
+    }
+    .post--about .post--about-text a{
+        margin-bottom: 25px;
+    }
+    .post--about img{
+        width: 100%;
+    }
+    .trainers{
+        width: 100%;
+    }
+    .trainers .trainers--text{
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .trainers .trainers--text p{
+        width: 70%;
+
+    }
+    .trainers .trainers--img { 
+        display: flex;
+        flex-direction: column;
+
+    }
+    .trainers .trainers--img a{
+        margin-bottom: 15px;
+    }
+    .more--challenges{
+        margin-top: 70px;
+
+        width: 100%;
+    }
+    .more--challenges .more--challenges-text{
+        margin:0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .more--challenges .more--challenges-text p{
+        width: 95%;
+    }
+    .more--challenges .challenges--block{
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+    .more--challenges .challenges--block .block{
+        width: 96%;
+
+    }
+
+    
+    .invite--block{
+        width: 100%;
+        height: 1340px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    .invite--block .invite--left{
+        width: 100%;
+        height: 47%;
+
+        padding-top: 60px;
+
+    }
+    .invite--block .invite--left .invite--left-text{
+        width: 60%;
+    }
+    .invite--block .invite--right{
+        width: 100%;
+        height: 53%;
+    }
+    .invite--block .invite--right .invite--right-form form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .invite--block .invite--right .invite--right-form form div{
+        width: 98%;
+    }
+    .invite--block .invite--right .invite--right-form form .input--message{
+        height: 225px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        border:none;
+
+    }
+    footer .footer--left{
+        width: 90%;
+        height: fit-content;
+
+        border-right:none;
+
+        border-bottom: 1px solid black;
+    }
+
+    footer .footer--left .footer--left-text ul{
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 40px;
+    }
+    footer .footer--center{
+        width: 90%;
+        height: 100%;
+        
+        padding-top: 30px;
+    }
+    
+    footer .footer--center h1{
+        width: 53%;
+
+    }
+    footer .footer--center p{
+        margin: 0;
+    }
+    footer .footer--center .footer--center-input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer--center .footer--center-input button{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    footer .footer--right{
+        margin-top: 70px;
+        padding-bottom: 50px;
+
+        width: 90%;
+    }
+}
+        /* media queries for small phone / Iphone 5s */
+@media (max-width:320px) {
+    header .logo img{
+        width: 70px;
+    }
+    header .logo h2{
+        font-size: 30px;
+    }
+    .post1 .post1--text h1{
+        font-size: 28px;
+    }
+    .post1 .post1--text h3{
+        font-size: 25px;
+    }
+    .post1 .post1--text p{
+        font-size: 17px;
+    }
+    .invite--block .invite--left .invite--left-text h1{
+        font-size: 42px;
+        
+    }
+    footer .footer--right{
+        padding-top: 16px;
+    }
+}
+            /* media queries for ipad mini - ipad pro */
+@media (min-width:769px) and (max-width:991px){
+    header .logo img{
+        width: 75px;
+    }
+    header .logo h2{
+        font-size: 40px;
+    }
+    header .Pages{
+        font-size: 22px;
+    }
+    .post1 .post1--text{
+        width: 65%;
+    }
+    .post--about{
+        flex-direction: column;
+
+        margin-top: 70px;
+        margin-bottom: 60px;
+    }
+    .post--about .post--about-text{
+        width: 70%;
+        align-items: flex-start;
+
+        margin-bottom: 25px;
+    }
+    .trainers--text{
+        margin-bottom: 50px;
+    }
+    .more--challenges {
+        margin-bottom: 20px;
+        margin-top: 80px;
+    }
+    .more--challenges .more--challenges-text p{
+        width: 77%;
+
+    }
+    .more--challenges .challenges--block{
+        flex-direction: column;
+    }
+    .more--challenges .challenges--block .block{
+        width: 65%;
+    }
+    .invite--block{
+        width: 97%;
+        
+        display: flex;
+        flex-direction: column;
+
+    }
+    .invite--block .invite--left{
+        width: 100%;
+
+        padding-top: 50px;
+        padding-bottom: 70px;
+
+    }
+    .invite--block .invite--right{
+        width: 100%;
+
+    }
+    .invite--block .invite--right .invite--right-form form{
+        flex-direction: column;
+
+        padding-bottom: 10px;
+
+    }
+    .invite--block .invite--right .invite--right-form form div{
+        width: 96%;
+    }
+    footer{
+        margin-top: 380px;
+        margin-bottom: 60px;
+    }
+    footer .footer--center h1{
+        width: 71%;
+    }
+
+
 }

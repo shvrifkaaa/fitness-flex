@@ -1,0 +1,403 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css";
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto', roboto-bold, sans-serif;
+    color: black;
+}
+
+
+body {
+    background: rgb(249, 230, 220);
+    width: auto;
+    height: auto;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background: rgb(255, 156, 118);
+
+    width: 100%;
+    height: 70px;
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1;
+}
+
+header .logo {
+    width: fit-content;
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 30px;
+    margin: 0;
+}
+
+header .logo img {
+    width: 85px;
+    border-radius: 20px;
+
+}
+header .logo h2{
+    font-size: 2em;
+    color: black;
+}
+header .Pages {
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 34px;
+
+}
+header .Pages a{
+    text-decoration: none;
+    color: black;
+}
+
+header .LogIn {
+    margin-right: 70px;
+}
+header .LogIn .login--btn{
+    background: #3573ff;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    width: 120px;
+    height: 35px;
+
+    opacity: .9;
+
+}
+header .LogIn .login--btn:hover{
+    opacity: 1;
+}
+header .LogIn .login--btn:focus{
+    outline: none;
+}
+
+#id01{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    display: none;
+    z-index: 1;
+}
+.window{
+    width: 47%;
+    height: 70%;
+
+    background: rgba(255, 255, 255, 0.87);
+
+    position: fixed;
+    top: 15%;
+    left: 25%;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+.window .close {
+    font-size: 50px;
+
+    position: absolute;
+    right: 2px;
+    top: -12px;   
+    opacity: .6;
+}
+.window .close:hover{
+    color: #e50c0c;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+}
+.window .login--left{
+    
+    width: 30%;
+    height: 100%;
+
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) ), url('../img/login-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.window .login--left form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100%;
+
+}
+.window .login--left form input{
+    width: 98%;
+}
+.window .login--left form .remember--me input{
+    width: auto;
+}
+.window .login--left form a button{
+    height: 33px;
+    width: 130px;
+
+    border-radius: 25px;
+    border: none;
+
+    background: rgb(129, 75, 231);
+
+    transition: .5s;
+    color: white;
+
+}
+.window .login--left form a button:hover{
+    background: black;
+    transition: .5s ;
+    
+}
+
+.window .login--right{
+    width: 70%;
+    height: 100%;
+
+    background: url('../img/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+.post1{
+    width: 92%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 120px;
+
+    background: rgb(255, 156, 118);
+}
+.post1 .post1--text{
+    width: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-top: 70px;
+
+}
+.post1 .post1--text p { 
+    font-size: 64px;
+    font-weight: 700;
+
+}
+.post1 .post1--text .post1--text1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 61%;
+    
+    font-size: 29px;
+    font-weight: 600;
+
+}
+ .post1 .post1--text .post1--text1 p1{
+    border-right: 1px solid black;
+
+    width: 40%;
+
+}
+.post1 .post1--text .post1--text1 p2{
+    font-size: 29px;
+}
+
+.post1 .post1--text button{
+    width: 20%;
+    height: 33px;
+
+    border-radius: 25px;
+    border: none;
+
+    background: rgb(129, 75, 231);
+    color: white;
+    
+    transition: .5s;
+
+    margin-top: 25px;
+}
+.post1 .post1--text button:hover{
+    background: black;
+    color: white;
+
+    transition: .5s;
+}
+
+.post1 img{
+    width: 54%;
+    
+    padding-top: 100px;
+}
+.post--about{
+    width: 45%;
+
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+.post--about h3{
+    font-size: 50px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+.post--about p{
+    font-size: 18px;
+}
+.post--about h1{
+    margin-top: 40px;
+
+}
+.post--about p2{
+    margin-top: 40px;
+}
+.post--about p3{
+    margin-top: 25px;
+}
+
+footer{
+    width: 92%;
+    height: 250px;
+
+    margin-top: 100px;
+    margin-bottom: 85px;
+
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid black;
+}
+footer .footer--left{
+    border-right: 1px solid black;
+
+    width: 15%;
+    height: 100%;
+
+    padding-top: 25px;
+
+}
+footer .footer--left .footer--left-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+footer .footer--left .footer--left-text ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footer--left .footer--left-text ul a{ 
+    color: black;
+    text-decoration: none;
+    margin-top: 8px;
+}
+footer .footer--center{
+    width: 70%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+}
+footer .footer--center h1{
+    font-size: 23px;
+    width: 40%;
+}
+footer .footer--center p{
+    margin-right: 136px;
+    font-size: 27px;
+}
+footer .footer--center .footer--center-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer .footer--center .footer--center-input button{
+    width: 100px;
+    height: 52px;
+
+    background: black;
+    color: white;
+
+    transition: .5s ;
+
+    border: none;
+    border-radius: 42px;
+
+    margin-left: 25px;
+}
+footer .footer--center .footer--center-input button:hover{
+    background: rgb(129, 75, 231);
+
+    transition: .5s ;
+}
+footer .footer--center .footer--center-input input{
+    width: 220px;
+    height: 52px;
+    
+    border: none;
+    border-radius: 16px;
+
+}
+footer .footer--right{
+    width: 17%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+
+    background: #854ec3;
+}
+
+footer .footer--right .footer--right-links img{
+    width: 28px;
+    height: 28px;
+    
+    border-radius: 50%;
+}
